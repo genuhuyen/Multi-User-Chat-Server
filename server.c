@@ -234,7 +234,7 @@ void server(int mrfd, int mwfd, int portno, bool c) {
       perror("select failed");
     }
 
-    //if someone is trynna connect ... then try accepting
+    //if someone is trying to connect ... then try accepting
     if(FD_ISSET(s_socket, &readfds)){
       if((new_sock = accept(s_socket, (SA*)&client, &len)) < 0){
         perror("accept failed");
